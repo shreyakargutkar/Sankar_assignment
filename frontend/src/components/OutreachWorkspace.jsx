@@ -220,7 +220,10 @@ export default function OutreachWorkspace({
 
   return (
     <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-3">
-      <div className="relative w-full max-w-6xl h-[92vh] bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+      <div
+        data-editorial-theme="true"
+        className="relative w-full max-w-6xl h-[92vh] bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+      >
         <div className="flex items-center justify-between px-5 py-3 border-b border-slate-800">
           <div>
             <div className="flex items-center gap-2">

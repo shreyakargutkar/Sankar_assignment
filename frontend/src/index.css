@@ -51,3 +51,148 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
   outline: 2px solid #9c7d8b;
   outline-offset: 2px;
 }
+
+[data-editorial-theme="true"] {
+  color: #30262e;
+  background-color: #fffaf3 !important;
+  border-color: #e8dbd4 !important;
+}
+
+[data-editorial-theme="true"] h2,
+[data-editorial-theme="true"] h3 {
+  color: #30262e;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+[data-editorial-theme="true"] [class*="bg-slate-950"],
+[data-editorial-theme="true"] [class*="bg-slate-900"] {
+  background-color: #fffaf3 !important;
+}
+
+[data-editorial-theme="true"] [class*="bg-slate-800"],
+[data-editorial-theme="true"] [class*="bg-slate-850"] {
+  background-color: #f8f0e8 !important;
+}
+
+[data-editorial-theme="true"] [class*="bg-slate-700"] {
+  background-color: #f2e7e2 !important;
+}
+
+[data-editorial-theme="true"] [class*="bg-indigo-950"],
+[data-editorial-theme="true"] [class*="bg-purple-950"] {
+  background-color: #f3e5e3 !important;
+}
+
+[data-editorial-theme="true"] [class*="bg-indigo-900"],
+[data-editorial-theme="true"] [class*="bg-purple-900"] {
+  background-color: #f1e7eb !important;
+}
+
+[data-editorial-theme="true"] [class*="bg-indigo-600"],
+[data-editorial-theme="true"] [class*="bg-indigo-700"],
+[data-editorial-theme="true"] [class*="bg-purple-600"] {
+  background-color: #725565 !important;
+}
+
+[data-editorial-theme="true"] [class*="bg-indigo-500"],
+[data-editorial-theme="true"] [class*="bg-purple-500"] {
+  background-color: #9c7d8b !important;
+}
+
+[data-editorial-theme="true"] [class*="bg-emerald-950"] {
+  background-color: #edf0e7 !important;
+}
+
+[data-editorial-theme="true"] [class*="bg-emerald-700"] {
+  background-color: #687760 !important;
+}
+
+[data-editorial-theme="true"] [class*="bg-rose-950"],
+[data-editorial-theme="true"] [class*="bg-rose-900"],
+[data-editorial-theme="true"] [class*="bg-rose-800"] {
+  background-color: #f4e4e3 !important;
+}
+
+[data-editorial-theme="true"] [class*="bg-amber-950"] {
+  background-color: #f8ebdf !important;
+}
+
+[data-editorial-theme="true"] [class*="border-slate-"],
+[data-editorial-theme="true"] [class*="border-indigo-"],
+[data-editorial-theme="true"] [class*="border-purple-"],
+[data-editorial-theme="true"] [class*="border-cyan-"],
+[data-editorial-theme="true"] [class*="border-amber-"] {
+  border-color: #e8dbd4 !important;
+}
+
+[data-editorial-theme="true"] [class*="border-rose-"] {
+  border-color: #ebd0d0 !important;
+}
+
+[data-editorial-theme="true"] [class*="text-white"],
+[data-editorial-theme="true"] [class*="text-slate-100"],
+[data-editorial-theme="true"] [class*="text-slate-200"] {
+  color: #30262e !important;
+}
+
+[data-editorial-theme="true"] [class*="text-slate-300"],
+[data-editorial-theme="true"] [class*="text-slate-400"] {
+  color: #75686e !important;
+}
+
+[data-editorial-theme="true"] [class*="text-slate-500"],
+[data-editorial-theme="true"] [class*="text-slate-600"] {
+  color: #93858a !important;
+}
+
+[data-editorial-theme="true"] [class*="text-indigo-"],
+[data-editorial-theme="true"] [class*="text-purple-"],
+[data-editorial-theme="true"] [class*="text-cyan-"] {
+  color: #725565 !important;
+}
+
+[data-editorial-theme="true"] [class*="text-amber-"] {
+  color: #805c47 !important;
+}
+
+[data-editorial-theme="true"] [class*="text-emerald-"] {
+  color: #53674d !important;
+}
+
+[data-editorial-theme="true"] [class*="text-rose-"] {
+  color: #804d55 !important;
+}
+
+[data-editorial-theme="true"] button[class*="bg-indigo-600"],
+[data-editorial-theme="true"] button[class*="bg-indigo-700"],
+[data-editorial-theme="true"] button[class*="bg-purple-600"],
+[data-editorial-theme="true"] button[class*="bg-emerald-700"] {
+  color: #fffaf3 !important;
+}
+
+[data-editorial-theme="true"] button[class*="bg-rose-800"] {
+  color: #804d55 !important;
+}
+
+[data-editorial-theme="true"] button:disabled {
+  color: #82757a !important;
+  background-color: #e9dfd9 !important;
+  opacity: 0.8;
+}
+
+[data-editorial-theme="true"] input,
+[data-editorial-theme="true"] textarea,
+[data-editorial-theme="true"] select {
+  color: #30262e;
+  background-color: #fffdf9;
+  border-color: #e6d9d2;
+}
+
+[data-editorial-theme="true"] input::placeholder,
+[data-editorial-theme="true"] textarea::placeholder {
+  color: #a99b9c;
+}
+
+[data-editorial-theme="true"] button:hover {
+  border-color: #c7aab4;
+}
