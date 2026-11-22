@@ -36,16 +36,16 @@ export default function StatsOverview({ stats, currentStatusFilter, onSelectStat
     <section aria-label="Creator pipeline overview" className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
         {STAT_CARDS.map(({ title, key, icon: Icon, description }) => (
-          <article key={key} className="rounded-lg border border-[#e1e7e3] bg-white px-4 py-3.5">
+          <article key={key} className="rounded-lg border border-[#e8dbd4] bg-[#fffaf3] px-4 py-3.5">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <p className="text-[13px] font-medium text-[#68756e]">{title}</p>
-                <p className="mt-1 text-[26px] leading-8 font-semibold tracking-tight text-[#26342d]">
+                <p className="text-[13px] font-medium text-[#82757a]">{title}</p>
+                <p className="mt-1 text-[26px] leading-8 font-semibold tracking-tight text-[#30262e]">
                   {(stats[key] || 0).toLocaleString()}
                 </p>
-                <p className="mt-1 text-xs text-[#8a948e]">{description}</p>
+                <p className="mt-1 text-xs text-[#94868a]">{description}</p>
               </div>
-              <div className="rounded-md bg-[#f1f5f2] p-2 text-[#52735f]">
+              <div className="rounded-md bg-[#f4e7e2] p-2 text-[#806478]">
                 <Icon className="h-4 w-4" aria-hidden="true" />
               </div>
             </div>
@@ -53,13 +53,13 @@ export default function StatsOverview({ stats, currentStatusFilter, onSelectStat
         ))}
       </div>
 
-      <div className="rounded-lg border border-[#e1e7e3] bg-white p-3.5">
+      <div className="rounded-lg border border-[#e8dbd4] bg-[#fffaf3] p-3.5">
         <div className="flex items-center justify-between gap-3 mb-2.5">
-          <h2 className="text-xs font-semibold text-[#55625b]">Pipeline status</h2>
+          <h2 className="text-xs font-semibold text-[#62545d]">Pipeline status</h2>
           {currentStatusFilter && (
             <button
               onClick={() => onSelectStatusFilter(null)}
-              className="text-xs text-[#35644f] hover:underline"
+              className="text-xs text-[#806478] hover:underline"
             >
               Clear filter
             </button>
@@ -76,13 +76,13 @@ export default function StatsOverview({ stats, currentStatusFilter, onSelectStat
                 aria-pressed={isSelected}
                 className={`inline-flex items-center gap-2 whitespace-nowrap rounded-md border px-2.5 py-1.5 text-xs transition-colors ${
                   isSelected
-                    ? 'border-[#8aa897] bg-[#edf4ef] text-[#315840]'
-                    : 'border-[#e8ece9] bg-[#fafbfa] text-[#67736c] hover:bg-[#f2f5f3]'
+                    ? 'border-[#b99ba8] bg-[#f3e5e3] text-[#604759]'
+                    : 'border-[#ecdfd9] bg-[#fffdf9] text-[#75686e] hover:bg-[#f8f0e8]'
                 }`}
               >
                 <span className={`h-1.5 w-1.5 rounded-full ${config.dot}`} />
                 <span>{status}</span>
-                <span className="rounded bg-white/80 px-1.5 py-0.5 text-[10px] font-medium text-[#68756e]">
+                <span className="rounded bg-white/80 px-1.5 py-0.5 text-[10px] font-medium text-[#75686e]">
                   {stats.status_breakdown?.[status] || 0}
                 </span>
               </button>

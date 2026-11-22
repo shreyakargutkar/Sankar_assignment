@@ -14,70 +14,70 @@ export const LEAD_STATUSES = [
 
 export const STATUS_CONFIG = {
   'New Lead': {
-    bg: 'bg-slate-100',
-    text: 'text-slate-700',
-    border: 'border-slate-200',
-    dot: 'bg-slate-400',
+    bg: 'bg-[#f2ede7]',
+    text: 'text-[#62545d]',
+    border: 'border-[#e5d9d2]',
+    dot: 'bg-[#9a8b8e]',
   },
   'Email Available': {
-    bg: 'bg-sky-50',
-    text: 'text-sky-800',
-    border: 'border-sky-200',
-    dot: 'bg-sky-500',
+    bg: 'bg-[#f1e7eb]',
+    text: 'text-[#715768]',
+    border: 'border-[#e5d3dc]',
+    dot: 'bg-[#9c7d8b]',
   },
   'Email Sent': {
-    bg: 'bg-indigo-50',
-    text: 'text-indigo-800',
-    border: 'border-indigo-200',
-    dot: 'bg-indigo-500',
+    bg: 'bg-[#ece7ed]',
+    text: 'text-[#54445a]',
+    border: 'border-[#dcd1df]',
+    dot: 'bg-[#725565]',
   },
   'Follow-up Due': {
-    bg: 'bg-amber-50',
-    text: 'text-amber-800',
-    border: 'border-amber-200',
-    dot: 'bg-amber-500',
+    bg: 'bg-[#f8ebdf]',
+    text: 'text-[#805c47]',
+    border: 'border-[#eed9c5]',
+    dot: 'bg-[#bd8b63]',
   },
   'Replied': {
-    bg: 'bg-cyan-50',
-    text: 'text-cyan-800',
-    border: 'border-cyan-200',
-    dot: 'bg-cyan-500',
+    bg: 'bg-[#f2e3e1]',
+    text: 'text-[#754d59]',
+    border: 'border-[#e9cfcd]',
+    dot: 'bg-[#b57d86]',
   },
   'Interested': {
-    bg: 'bg-emerald-50',
-    text: 'text-emerald-800',
-    border: 'border-emerald-200',
-    dot: 'bg-emerald-500',
+    bg: 'bg-[#efe8dc]',
+    text: 'text-[#6e5c40]',
+    border: 'border-[#e3d6c1]',
+    dot: 'bg-[#a38a5d]',
   },
   'Not Interested': {
-    bg: 'bg-rose-50',
-    text: 'text-rose-800',
-    border: 'border-rose-200',
-    dot: 'bg-rose-500',
+    bg: 'bg-[#f4e4e3]',
+    text: 'text-[#804d55]',
+    border: 'border-[#ebd0d0]',
+    dot: 'bg-[#b46d78]',
   },
   'Pricing Enquiry': {
-    bg: 'bg-amber-50',
-    text: 'text-amber-800',
-    border: 'border-amber-200',
-    dot: 'bg-amber-500',
+    bg: 'bg-[#f8ebdf]',
+    text: 'text-[#805c47]',
+    border: 'border-[#eed9c5]',
+    dot: 'bg-[#bd8b63]',
   },
   'Collaboration Request': {
-    bg: 'bg-violet-50',
-    text: 'text-violet-800',
-    border: 'border-violet-200',
-    dot: 'bg-violet-500',
+    bg: 'bg-[#f1e7eb]',
+    text: 'text-[#715768]',
+    border: 'border-[#e5d3dc]',
+    dot: 'bg-[#9c7d8b]',
   },
   'General Query': {
-    bg: 'bg-slate-100',
-    text: 'text-slate-700',
-    border: 'border-slate-200',
-    dot: 'bg-slate-400',
+    bg: 'bg-[#f2ede7]',
+    text: 'text-[#62545d]',
+    border: 'border-[#e5d9d2]',
+    dot: 'bg-[#9a8b8e]',
   },
   'Collaboration Confirmed': {
-    bg: 'bg-violet-50',
-    text: 'text-violet-800',
-    border: 'border-violet-200',
-    dot: 'bg-violet-500',
+    bg: 'bg-[#ece7ed]',
+    text: 'text-[#54445a]',
+    border: 'border-[#dcd1df]',
+    dot: 'bg-[#725565]',
   },
 };
 
@@ -107,34 +107,34 @@ export function getScoreBadge(score) {
   if (score === null || score === undefined) {
     return {
       text: 'Unranked',
-      class: 'bg-slate-100 text-slate-600 border border-slate-200',
-      barColor: 'bg-slate-400',
+      class: 'bg-[#f2ede7] text-[#75686e] border border-[#e5d9d2]',
+      barColor: 'bg-[#b5a6a4]',
     };
   }
   if (score >= 85) {
     return {
       text: `${score}/100 Excellent`,
-      class: 'bg-emerald-50 text-emerald-800 border border-emerald-200',
-      barColor: 'bg-emerald-600',
+      class: 'bg-[#ece7ed] text-[#54445a] border border-[#dcd1df]',
+      barColor: 'bg-[#725565]',
     };
   }
   if (score >= 70) {
     return {
       text: `${score}/100 Strong`,
-      class: 'bg-sky-50 text-sky-800 border border-sky-200',
-      barColor: 'bg-sky-600',
+      class: 'bg-[#f1e7eb] text-[#715768] border border-[#e5d3dc]',
+      barColor: 'bg-[#9c7d8b]',
     };
   }
   if (score >= 55) {
     return {
       text: `${score}/100 Moderate`,
-      class: 'bg-amber-50 text-amber-800 border border-amber-200',
-      barColor: 'bg-amber-600',
+      class: 'bg-[#f8ebdf] text-[#805c47] border border-[#eed9c5]',
+      barColor: 'bg-[#bd8b63]',
     };
   }
   return {
     text: `${score}/100 Low`,
-    class: 'bg-rose-50 text-rose-800 border border-rose-200',
-    barColor: 'bg-rose-600',
+    class: 'bg-[#f4e4e3] text-[#804d55] border border-[#ebd0d0]',
+    barColor: 'bg-[#b46d78]',
   };
 }

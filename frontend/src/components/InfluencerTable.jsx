@@ -28,22 +28,22 @@ export default function InfluencerTable({
   const isAllSelected = influencers.length > 0 && influencers.every((inf) => selectedIds.includes(inf.id));
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-[#e1e7e3] bg-white">
+    <div className="overflow-x-auto rounded-lg border border-[#e8dbd4] bg-[#fffaf3]">
       <table className="w-full min-w-[1080px] text-left text-xs">
-        <thead className="bg-[#f8faf8] text-[#758179] uppercase tracking-wide text-[10px] font-semibold border-b border-[#e8ede9]">
+        <thead className="bg-[#f8f0e8] text-[#82757a] uppercase tracking-wide text-[10px] font-semibold border-b border-[#ecdfd9]">
           <tr>
             <th className="p-3.5 w-10">
               <input
                 type="checkbox"
                 checked={isAllSelected}
                 onChange={onToggleSelectAll}
-                className="w-4 h-4 rounded text-[#35644f] border-[#cad4cd] focus:ring-[#52735f]"
+                className="w-4 h-4 rounded text-[#725565] border-[#d6c6c2] focus:ring-[#9c7d8b]"
               />
             </th>
             <th className="p-3.5">
               <button
                 onClick={() => onSortChange('name')}
-                className="flex items-center gap-1.5 hover:text-[#26342d] transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#30262e] transition-colors"
               >
                 <span>Influencer</span>
                 <ArrowUpDown className="w-3 h-3" />
@@ -53,7 +53,7 @@ export default function InfluencerTable({
             <th className="p-3.5">
               <button
                 onClick={() => onSortChange('followers_count')}
-                className="flex items-center gap-1.5 hover:text-[#26342d] transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#30262e] transition-colors"
               >
                 <span>Followers</span>
                 <ArrowUpDown className="w-3 h-3" />
@@ -65,7 +65,7 @@ export default function InfluencerTable({
             <th className="p-3.5">
               <button
                 onClick={() => onSortChange('suitability_score')}
-                className="flex items-center gap-1.5 hover:text-[#26342d] transition-colors"
+                className="flex items-center gap-1.5 hover:text-[#30262e] transition-colors"
               >
                 <span>Fit score</span>
                 <ArrowUpDown className="w-3 h-3" />
@@ -76,10 +76,10 @@ export default function InfluencerTable({
           </tr>
         </thead>
 
-        <tbody className="divide-y divide-[#edf0ee] text-[#526057]">
+        <tbody className="divide-y divide-[#f0e5df] text-[#62545d]">
           {influencers.length === 0 ? (
             <tr>
-              <td colSpan="10" className="p-10 text-center text-[#7b8780]">
+              <td colSpan="10" className="p-10 text-center text-[#82757a]">
                 No creator records match these filters.
               </td>
             </tr>
@@ -93,7 +93,7 @@ export default function InfluencerTable({
                   key={inf.id}
                   onClick={() => onViewDetails(inf)}
                   className={`cursor-pointer transition-colors ${
-                    isSelected ? 'bg-[#f0f6f1]' : 'hover:bg-[#fafcfa]'
+                    isSelected ? 'bg-[#f8eeeb]' : 'hover:bg-[#fffdf9]'
                   }`}
                 >
                   {/* Checkbox */}
@@ -102,28 +102,28 @@ export default function InfluencerTable({
                       type="checkbox"
                       checked={isSelected}
                       onChange={() => onToggleSelect(inf.id)}
-                      className="w-4 h-4 rounded text-[#35644f] border-[#cad4cd] focus:ring-[#52735f]"
+                      className="w-4 h-4 rounded text-[#725565] border-[#d6c6c2] focus:ring-[#9c7d8b]"
                     />
                   </td>
 
                   {/* Name & Username */}
                   <td className="p-3.5">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-md bg-[#e8f0eb] flex items-center justify-center font-semibold text-[#35644f] text-xs">
+                      <div className="w-8 h-8 rounded-md bg-[#efd9d5] flex items-center justify-center font-semibold text-[#725565] text-xs">
                         {inf.name.charAt(0)}
                       </div>
                       <div>
-                        <div className="font-medium text-[#2e3b34] hover:text-[#35644f] transition-colors">
+                        <div className="font-medium text-[#30262e] hover:text-[#725565] transition-colors">
                           {inf.name}
                         </div>
                         <div className="flex items-center gap-1.5">
-                          <span className="text-[#829087] text-[11px]">@{inf.instagram_username}</span>
+                          <span className="text-[#93858a] text-[11px]">@{inf.instagram_username}</span>
                           <a
                             href={inf.profile_url}
                             target="_blank"
                             rel="noreferrer"
                             onClick={(e) => e.stopPropagation()}
-                            className="text-[#9aa49e] hover:text-[#35644f] transition-colors"
+                            className="text-[#a99b9c] hover:text-[#725565] transition-colors"
                             title="Open Instagram"
                           >
                             <ExternalLink className="w-3 h-3" />
@@ -135,13 +135,13 @@ export default function InfluencerTable({
 
                   {/* Niche */}
                   <td className="p-3.5">
-                    <span className="px-2 py-1 rounded-md bg-[#f5f7f5] text-[#58665d] border border-[#e8ede9] text-[11px]">
+                    <span className="px-2 py-1 rounded-md bg-[#f8f0e8] text-[#75686e] border border-[#ecdfd9] text-[11px]">
                       {inf.niche}
                     </span>
                   </td>
 
                   {/* Followers */}
-                  <td className="p-3.5 font-medium text-[#35433b]">
+                  <td className="p-3.5 font-medium text-[#493744]">
                     {formatFollowers(inf.followers_count)}
                   </td>
 
@@ -150,24 +150,24 @@ export default function InfluencerTable({
                     {inf.email ? (
                       <button
                         onClick={(e) => handleCopyEmail(inf.id, inf.email, e)}
-                        className="flex items-center gap-1.5 px-2 py-1.5 rounded-md bg-white hover:bg-[#f7faf8] border border-[#e4e9e5] text-[11px] text-[#536159] transition-colors max-w-[190px] truncate"
+                        className="flex items-center gap-1.5 px-2 py-1.5 rounded-md bg-[#fffdf9] hover:bg-[#f8f0e8] border border-[#ecdfd9] text-[11px] text-[#62545d] transition-colors max-w-[190px] truncate"
                         title="Click to copy email"
                       >
-                        <Mail className="w-3 h-3 text-[#829087] flex-shrink-0" />
+                        <Mail className="w-3 h-3 text-[#9c7d8b] flex-shrink-0" />
                         <span className="truncate">{inf.email}</span>
                         {copiedId === inf.id ? (
                           <Check className="w-3 h-3 text-emerald-400 flex-shrink-0" />
                         ) : (
-                          <Copy className="w-3 h-3 text-[#9aa49e] flex-shrink-0" />
+                          <Copy className="w-3 h-3 text-[#a99b9c] flex-shrink-0" />
                         )}
                       </button>
                     ) : (
-                      <span className="text-[#9aa49e] italic text-[11px]">None listed</span>
+                      <span className="text-[#a99b9c] italic text-[11px]">None listed</span>
                     )}
                   </td>
 
                   {/* Location */}
-                  <td className="p-3.5 text-[#68756e] truncate max-w-[160px]">
+                  <td className="p-3.5 text-[#82757a] truncate max-w-[160px]">
                     {inf.location}
                   </td>
 
@@ -186,7 +186,7 @@ export default function InfluencerTable({
                         <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold ${scoreBadge.class}`}>
                           {inf.suitability_score}/100
                         </span>
-                        <div className="w-12 bg-[#e8ede9] h-1.5 rounded-full overflow-hidden hidden sm:block">
+                        <div className="w-12 bg-[#ecdfd9] h-1.5 rounded-full overflow-hidden hidden sm:block">
                           <div
                             className={`h-full ${scoreBadge.barColor}`}
                             style={{ width: `${inf.suitability_score}%` }}
@@ -199,7 +199,7 @@ export default function InfluencerTable({
                           e.stopPropagation();
                           onViewDetails(inf);
                         }}
-                        className="flex items-center gap-1 text-[11px] text-[#52735f] hover:text-[#315840] font-medium"
+                        className="flex items-center gap-1 text-[11px] text-[#806478] hover:text-[#604759] font-medium"
                       >
                         <Sparkles className="w-3 h-3" />
                         <span>Run AI</span>
@@ -210,11 +210,11 @@ export default function InfluencerTable({
                   {/* Sheets status */}
                   <td className="p-3.5 text-center">
                     {inf.synced_to_sheets ? (
-                      <span title="Synced to Google Sheets" className="inline-block text-[#52735f]">
+                      <span title="Synced to Google Sheets" className="inline-block text-[#806478]">
                         <FileSpreadsheet className="w-4 h-4 mx-auto" />
                       </span>
                     ) : (
-                      <span title="Not synced to Sheets" className="inline-block text-[#b3bcb6]">
+                      <span title="Not synced to Sheets" className="inline-block text-[#c8b9b6]">
                         <FileSpreadsheet className="w-4 h-4 mx-auto" />
                       </span>
                     )}
@@ -225,14 +225,14 @@ export default function InfluencerTable({
                     <div className="flex items-center justify-end gap-1">
                       <button
                         onClick={() => onViewDetails(inf)}
-                        className="p-1.5 rounded-md text-[#89948d] hover:text-[#34463b] hover:bg-[#f1f5f2] transition-colors"
+                        className="p-1.5 rounded-md text-[#9a8b8e] hover:text-[#493744] hover:bg-[#f4e9e3] transition-colors"
                         title="View Full Profile & AI Analysis"
                       >
                         <Eye className="w-4 h-4" />
                       </button>
                       <button
                         onClick={() => onDelete(inf.id)}
-                        className="p-1.5 rounded-md text-[#89948d] hover:text-rose-600 hover:bg-rose-50 transition-colors"
+                        className="p-1.5 rounded-md text-[#9a8b8e] hover:text-rose-700 hover:bg-rose-50 transition-colors"
                         title="Delete Influencer"
                       >
                         <Trash2 className="w-4 h-4" />

@@ -39,8 +39,8 @@ export default function StatusBadge({ status, onStatusChange, isEditable = true 
               setIsOpen(false);
             }}
           />
-          <div className="absolute right-0 z-50 mt-1 w-52 rounded-lg bg-white border border-[#e1e7e3] shadow-xl p-1.5 text-xs focus:outline-none">
-            <div className="px-2 py-1 text-[11px] font-semibold text-[#87928b] uppercase tracking-wide border-b border-[#edf0ee] mb-1">
+          <div className="absolute right-0 z-50 mt-1 w-52 rounded-lg bg-[#fffaf3] border border-[#e8dbd4] shadow-xl p-1.5 text-xs focus:outline-none">
+            <div className="px-2 py-1 text-[11px] font-semibold text-[#93858a] uppercase tracking-wide border-b border-[#f0e5df] mb-1">
               Change Lead Status
             </div>
             {LEAD_STATUSES.map((item) => {
@@ -56,15 +56,15 @@ export default function StatusBadge({ status, onStatusChange, isEditable = true 
                   }}
                   className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-left transition-colors ${
                     isCurrent
-                      ? 'bg-[#edf4ef] text-[#315840] font-semibold'
-                      : 'text-[#58665d] hover:bg-[#f4f7f5] hover:text-[#26342d]'
+                      ? 'bg-[#f3e5e3] text-[#604759] font-semibold'
+                      : 'text-[#62545d] hover:bg-[#f8f0e8] hover:text-[#30262e]'
                   }`}
                 >
                   <div className="flex items-center gap-2">
                     <span className={`w-2 h-2 rounded-full ${itemConfig.dot}`}></span>
                     <span>{item}</span>
                   </div>
-                  {isCurrent && <Check className="w-3.5 h-3.5 text-[#52735f]" />}
+                  {isCurrent && <Check className="w-3.5 h-3.5 text-[#806478]" />}
                 </button>
               );
             })}

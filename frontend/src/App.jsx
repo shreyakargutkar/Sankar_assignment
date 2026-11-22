@@ -212,11 +212,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f5f6f5] text-[#26342d] flex flex-col font-sans">
+    <div className="min-h-screen bg-[#f3ebe4] text-[#30262e] flex flex-col font-sans">
       
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-5 right-5 z-50 flex items-center gap-2 px-4 py-3 rounded-lg bg-white border border-[#dfe5e1] shadow-lg text-sm font-medium text-[#26342d]">
+        <div className="fixed bottom-5 right-5 z-50 flex items-center gap-2 px-4 py-3 rounded-lg bg-[#fffaf3] border border-[#e8dbd4] shadow-lg text-sm font-medium text-[#30262e]">
           {toastMessage.type === 'error' ? (
             <AlertCircle className="w-4 h-4 text-rose-400" />
           ) : (
@@ -242,11 +242,11 @@ export default function App() {
       <main className="flex-1 max-w-[1440px] w-full mx-auto px-5 lg:px-8 py-6 space-y-5">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-[#849088]">Workspace</p>
-            <h1 className="mt-1 text-xl font-semibold tracking-tight text-[#26342d]">Creator pipeline</h1>
-            <p className="mt-1 text-sm text-[#738078]">Review prospects, manage contacts, and track partnership outreach.</p>
+            <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#927f87]">Workspace</p>
+            <h1 className="mt-1 font-serif text-2xl font-semibold tracking-tight text-[#30262e]">Creator pipeline</h1>
+            <p className="mt-1 text-sm text-[#82757a]">Review prospects, manage contacts, and track partnership outreach.</p>
           </div>
-          <p className="hidden sm:block text-xs text-[#8a948e]">
+          <p className="hidden sm:block text-xs text-[#94868a]">
             {totalCount.toLocaleString()} {totalCount === 1 ? 'creator' : 'creators'}
           </p>
         </div>
@@ -259,24 +259,24 @@ export default function App() {
         />
 
         {/* Search, Filter & Action Controls Bar */}
-        <div className="p-4 rounded-lg bg-white border border-[#e1e7e3] space-y-3">
+        <div className="p-4 rounded-lg bg-[#fffaf3] border border-[#e8dbd4] shadow-[0_1px_2px_rgba(48,38,46,0.03)] space-y-3">
           
           <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
             
             {/* Search Input */}
             <div className="relative flex-1">
-              <Search className="w-4 h-4 text-[#89948d] absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-[#9a8b8e] absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search by creator name, @handle, keywords, email, or city..."
-                className="w-full pl-9 pr-8 py-2.5 rounded-md bg-white border border-[#dfe5e1] text-sm text-[#29362f] placeholder-[#9aa39e] focus:outline-none focus:border-[#73917e] transition-colors"
+                className="w-full pl-9 pr-8 py-2.5 rounded-md bg-[#fffdf9] border border-[#e6d9d2] text-sm text-[#30262e] placeholder-[#a99b9c] focus:outline-none focus:border-[#a98d9b] transition-colors"
               />
               {searchTerm && (
                 <button
                   onClick={() => setSearchTerm('')}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#89948d] hover:text-[#34463b]"
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#9a8b8e] hover:text-[#493744]"
                 >
                   <X className="w-3.5 h-3.5" />
                 </button>
@@ -289,7 +289,7 @@ export default function App() {
               <select
                 value={selectedNiche}
                 onChange={(e) => setSelectedNiche(e.target.value)}
-                className="px-3 py-2.5 rounded-md bg-white border border-[#dfe5e1] text-sm text-[#536159] focus:outline-none focus:border-[#73917e]"
+                className="px-3 py-2.5 rounded-md bg-[#fffdf9] border border-[#e6d9d2] text-sm text-[#62545d] focus:outline-none focus:border-[#a98d9b]"
               >
                 <option value="All">All Niches</option>
                 {NICHES.map((n) => (
@@ -301,7 +301,7 @@ export default function App() {
               <select
                 value={minScoreFilter}
                 onChange={(e) => setMinScoreFilter(e.target.value)}
-                className="px-3 py-2.5 rounded-md bg-white border border-[#dfe5e1] text-sm text-[#536159] focus:outline-none focus:border-[#73917e]"
+                className="px-3 py-2.5 rounded-md bg-[#fffdf9] border border-[#e6d9d2] text-sm text-[#62545d] focus:outline-none focus:border-[#a98d9b]"
               >
                 <option value="">Any fit score</option>
                 <option value="80">Fit score 80+ (Strong)</option>
@@ -310,11 +310,11 @@ export default function App() {
               </select>
 
               {/* View Switcher */}
-              <div className="flex items-center rounded-md bg-[#f4f6f4] border border-[#e1e7e3] p-0.5">
+              <div className="flex items-center rounded-md bg-[#f4e9e3] border border-[#e8dbd4] p-0.5">
                 <button
                   onClick={() => setViewMode('table')}
                   className={`p-1.5 rounded-md transition-colors ${
-                    viewMode === 'table' ? 'bg-white text-[#315840] shadow-sm' : 'text-[#7a867f] hover:text-[#34463b]'
+                    viewMode === 'table' ? 'bg-[#fffaf3] text-[#604759] shadow-sm' : 'text-[#8b7d82] hover:text-[#493744]'
                   }`}
                   title="Table View"
                 >
@@ -323,7 +323,7 @@ export default function App() {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-1.5 rounded-md transition-colors ${
-                    viewMode === 'grid' ? 'bg-white text-[#315840] shadow-sm' : 'text-[#7a867f] hover:text-[#34463b]'
+                    viewMode === 'grid' ? 'bg-[#fffaf3] text-[#604759] shadow-sm' : 'text-[#8b7d82] hover:text-[#493744]'
                   }`}
                   title="Grid Cards View"
                 >
@@ -335,11 +335,11 @@ export default function App() {
           </div>
 
           {/* Batch Actions Toolbar (Shown when items selected or always visible for export) */}
-          <div className="flex flex-wrap items-center justify-between pt-3 border-t border-[#edf0ee] text-xs text-[#77837c]">
+          <div className="flex flex-wrap items-center justify-between pt-3 border-t border-[#f0e5df] text-xs text-[#82757a]">
             <div className="flex items-center gap-2">
-              <span>Showing <span className="font-semibold text-[#35433b]">{influencers.length}</span> of <span className="font-semibold text-[#35433b]">{totalCount}</span> creators</span>
+              <span>Showing <span className="font-semibold text-[#493744]">{influencers.length}</span> of <span className="font-semibold text-[#493744]">{totalCount}</span> creators</span>
               {selectedIds.length > 0 && (
-                <span className="px-2 py-0.5 rounded-md bg-[#edf4ef] text-[#315840] border border-[#dce9df] font-medium">
+                <span className="px-2 py-0.5 rounded-md bg-[#f3e5e3] text-[#604759] border border-[#ead4d3] font-medium">
                   {selectedIds.length} selected
                 </span>
               )}
@@ -350,7 +350,7 @@ export default function App() {
                 <>
                   <button
                     onClick={handleBatchAIAnalyze}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white hover:bg-[#f5f8f6] text-[#45644f] border border-[#dfe7e1] font-medium transition-colors"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#fffdf9] hover:bg-[#f8f0e8] text-[#725565] border border-[#e8dbd4] font-medium transition-colors"
                   >
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>Assess selected ({selectedIds.length})</span>
@@ -358,7 +358,7 @@ export default function App() {
 
                   <button
                     onClick={() => setIsOutreachOpen(true)}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white hover:bg-[#f5f8f6] text-[#45644f] border border-[#dfe7e1] font-medium transition-colors"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#fffdf9] hover:bg-[#f8f0e8] text-[#725565] border border-[#e8dbd4] font-medium transition-colors"
                   >
                     <Mail className="w-3.5 h-3.5" />
                     <span>Draft outreach ({selectedIds.length})</span>
@@ -366,7 +366,7 @@ export default function App() {
 
                   <button
                     onClick={() => setIsSheetsModalOpen(true)}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white hover:bg-[#f5f8f6] text-[#45644f] border border-[#dfe7e1] font-medium transition-colors"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#fffdf9] hover:bg-[#f8f0e8] text-[#725565] border border-[#e8dbd4] font-medium transition-colors"
                   >
                     <FileSpreadsheet className="w-3.5 h-3.5" />
                     <span>Sync Selected</span>
@@ -374,7 +374,7 @@ export default function App() {
 
                   <button
                     onClick={() => setSelectedIds([])}
-                    className="px-2 py-1.5 text-[#77837c] hover:text-[#34463b]"
+                    className="px-2 py-1.5 text-[#82757a] hover:text-[#493744]"
                   >
                     Clear Selection
                   </button>
@@ -383,10 +383,10 @@ export default function App() {
 
               <button
                 onClick={handleExportCSV}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white hover:bg-[#f6f8f6] text-[#526057] border border-[#dfe5e1] font-medium transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#fffdf9] hover:bg-[#f8f0e8] text-[#62545d] border border-[#e8dbd4] font-medium transition-colors"
                 title="Download CSV of current list"
               >
-                <Download className="w-3.5 h-3.5 text-slate-400" />
+                <Download className="w-3.5 h-3.5 text-[#9a8b8e]" />
                 <span>Export CSV</span>
               </button>
             </div>
@@ -397,9 +397,9 @@ export default function App() {
 
         {/* Content Section: Table or Cards */}
         {isLoading ? (
-          <div className="p-16 text-center rounded-lg bg-white border border-[#e1e7e3]">
-            <RefreshCw className="w-7 h-7 text-[#52735f] animate-spin mx-auto mb-3" />
-            <p className="text-sm font-medium text-[#68756e]">Loading creator records…</p>
+          <div className="p-16 text-center rounded-lg bg-[#fffaf3] border border-[#e8dbd4]">
+            <RefreshCw className="w-7 h-7 text-[#907586] animate-spin mx-auto mb-3" />
+            <p className="text-sm font-medium text-[#82757a]">Loading creator records…</p>
           </div>
         ) : viewMode === 'table' ? (
           <InfluencerTable
@@ -433,7 +433,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-[#e4e9e6] py-4 bg-white text-center text-xs text-[#8a948e]">
+      <footer className="border-t border-[#e8dbd4] py-4 bg-[#fffaf3] text-center text-xs text-[#94868a]">
         Creator CRM · Research, contact management, and outreach
       </footer>
 
