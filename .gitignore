@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+test_*.db
+*.db-journal
+*.db
+*.sqlite
+*.sqlite3
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+.vite/
+npm-debug.log*
+
+# Environment & Credentials
+.env
+google_credentials.json
+backend/google_credentials.json
+backend/app/data/google_sheets_synced_export.csv
+backend/app/data/simulated_gmail_outbox.jsonl
+
+# OS
+.DS_Store
+Thumbs.db
